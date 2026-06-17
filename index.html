@@ -3,85 +3,808 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youssef The God | Official Site</title>
+    <title>the hollyPACK | Premium & Eco-Friendly Packaging Solutions</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary: #0F3D2E;      /* Emerald Green */
+            --primary-light: #1b5e48;
+            --accent: #D4AF37;       /* Muted Gold */
+            --dark: #1A1A1A;
+            --light: #F9F9F9;
+            --gray: #666666;
+            --border: #E5E5E5;
+            --shadow: rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #0d0e12;
-            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: #FFF;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Utility Components */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Header / Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(8px);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #F4F7F5 0%, #EBF0EC 100%);
+            padding: 100px 0 120px 0;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            color: var(--primary);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Mockup Placeholder Graphic using pure CSS for bulletproof loading */
+        .box-mockup {
+            width: 100%;
+            max-width: 450px;
+            height: 380px;
+            background: var(--primary);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(15, 61, 46, 0.25);
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            background: #161920;
+            color: white;
             padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #232836;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #ff4655, #ff8038);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .box-mockup::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px dashed rgba(255,255,255,0.2);
+            border-radius: 12px;
+            pointer-events: none;
         }
 
-        p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 10px; /* Reduced since button is gone */
+        .box-mockup i {
+            font-size: 5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
         }
 
-        .badge {
-            display: inline-block;
-            background: #232836;
-            color: #ff4655;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background-color: var(--light);
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(15, 61, 46, 0.08);
+            color: var(--primary);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Interactive Calculator Section */
+        .calculator-section {
+            padding: 100px 0;
+            background-color: var(--light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .calc-wrapper {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px var(--shadow);
+            padding: 48px;
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+        }
+
+        .calc-form h3, .calc-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(15, 61, 46, 0.1);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 16px;
+        }
+
+        .radio-label {
+            flex: 1;
+            border: 1px solid var(--border);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .radio-group input {
+            display: none;
+        }
+
+        .radio-group input:checked + .radio-label {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .calc-results {
+            background-color: #FAFBFB;
+            border-radius: 8px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price-display {
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: var(--gray);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 70, 85, 0.2);
         }
 
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .price-unit {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .spec-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border);
+            font-size: 0.95rem;
+        }
+
+        .spec-item span:last-child {
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            margin-bottom: 32px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            background-color: #F0F4F2;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 40px;
-            font-size: 0.85rem;
-            color: #475569;
+            background-color: var(--dark);
+            color: #A0A0A0;
+            padding: 60px 0 30px 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #2A2A2A;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #A0A0A0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Responsive Design Rules */
+        @media (max-width: 992px) {
+            .hero-grid, .calc-wrapper, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-content h1 {
+                font-size: 2.75rem;
+            }
+            .hero {
+                padding: 60px 0;
+                text-align: center;
+            }
+            .hero-content p {
+                margin: 0 auto 36px auto;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Can be expanded with a JS toggle class */
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="badge">Live Soon</div>
-        <h1>Youssef The God</h1>
-        <p>Welcome to my official corner of the internet. This space is currently under construction while I build out something epic. Stay tuned.</p>
-    </div>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">the holly<span>PACK</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#calculator">Quote Calculator</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#calculator" class="btn btn-primary" style="padding: 8px 20px; color:white;">Get Estimate</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Smart Packaging Built for Modern Brands</h1>
+                <p>From sustainable raw materials to premium structural engineering, the hollyPACK designs custom production runs tailored exactly to your footprint and presentation specs.</p>
+                <div class="hero-btns">
+                    <a href="#calculator" class="btn btn-primary">Calculate a Run</a>
+                    <a href="#services" class="btn btn-outline">Explore Materials</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="box-mockup">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h2 style="font-weight:600; margin-bottom:8px;">Premium Engineering</h2>
+                    <p style="font-size:0.9rem; opacity:0.8;">Custom Corrugated, Rigid Gift Structures & Sustainable Poly mailers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Manufacturing Capabilities</h2>
+                <p>We combine advanced physical manufacturing with rapid turnaround times to supply industries worldwide.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Eco-Friendly Mailers</h3>
+                    <p>100% biodegradable and compostable structural materials designed to protect consumer goods without harming the environment.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h3>Custom Corrugated</h3>
+                    <p>High-durability double and triple-walled shipping storage setups engineered to withstand extreme shipping logistics chain demands.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3>Luxury Rigid Boxes</h3>
+                    <p>Premium structural presentations utilizing foil stamping, precise custom structural inserts, and magnetic snap enclosures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Instant Production Estimator</h2>
+                <p>Configure your basic run metrics to instantly evaluate direct baseline material structures and volume pricing breaks.</p>
+            </div>
+            
+            <div class="calc-wrapper">
+                <div class="calc-form">
+                    <h3>Configure Your Configuration</h3>
+                    
+                    <div class="form-group">
+                        <label>Select Structure Archetype</label>
+                        <div class="radio-group">
+                            <input type="radio" id="type-mailer" name="boxType" value="mailer" checked onchange="calculatePrice()">
+                            <label for="type-mailer" class="radio-label">Eco Mailer</label>
+                            
+                            <input type="radio" id="type-corrugated" name="boxType" value="corrugated" onchange="calculatePrice()">
+                            <label for="type-corrugated" class="radio-label">Corrugated</label>
+                            
+                            <input type="radio" id="type-rigid" name="boxType" value="rigid" onchange="calculatePrice()">
+                            <label for="type-rigid" class="radio-label">Luxury Rigid</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Order Volume (Units)</label>
+                        <input type="number" id="quantity" class="form-control" value="1000" min="100" step="100" oninput="calculatePrice()">
+                        <span style="font-size:0.8rem; color:var(--gray);">Minimum wholesale batch processing starts at 100 units.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printing">Surface Print Graphic Coverage</label>
+                        <select id="printing" class="form-control" onchange="calculatePrice()">
+                            <option value="none">No Print (Raw Material Finish)</option>
+                            <option value="monochrome">1-Color Flexographic Printing</option>
+                            <option value="full">Full-Color Digital CMYK Matrix</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div>
+                        <h3>Pricing Overview</h3>
+                        <ul class="spec-list">
+                            <li class="spec-item"><span>Base Unit Cost:</span><span id="label-base">$0.00</span></li>
+                            <li class="spec-item"><span>Print Premium:</span><span id="label-print">$0.00</span></li>
+                            <li class="spec-item"><span>Volume Bulk Discount:</span><span id="label-discount" style="color: #2E7D32;">0%</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="price-display">
+                            <div class="price-label">Estimated Total</div>
+                            <div class="price-amount">$<span id="total-price">0.00</span></div>
+                            <div class="price-unit">excl. shipping & localized tax structures</div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary" style="display:block; text-align:center;">Lock In This Specification</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h3>Let's Refine Your Logistics Architecture</h3>
+                <p>Have highly custom dimensional requests or unique substrate goals? Our product designers are ready to format structural solutions directly for your product roadmap.</p>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong style="display:block;">Email Our Engineers</strong>
+                        <span style="color:var(--gray);">build@thehollypack.com</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong style="display:block;">Direct Headquarters Office</strong>
+                        <span style="color:var(--gray);">+1 (800) 555-PACK</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calc-form" style="background-color: var(--light); padding: 40px; border-radius: 8px; border: 1px solid var(--border);">
+                <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Submit Blueprint Inquiry</h3>
+                <form onsubmit="event.preventDefault(); alert('Thank you! Our structural packaging design division will contact you within 24 business hours.');">
+                    <div class="form-group">
+                        <label>Corporate Name</label>
+                        <input type="text" class="form-control" required placeholder="e.g. Acme Corp">
+                    </div>
+                    <div class="form-group">
+                        <label>Business Email Address</label>
+                        <input type="email" class="form-control" required placeholder="you@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Tell Us About Your Product Payload</label>
+                        <textarea class="form-control" rows="4" placeholder="Describe size, weight constraints, or design vision..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Request Technical Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Element -->
     <footer>
-        &copy; 2026 Youssef The God. All rights reserved.
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">the holly<span>PACK</span></a>
+                    <p style="margin-top:12px; font-size:0.9rem;">High-performance, structurally engineered industrial packaging solutions built with direct supply-chain accountability.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Production Frameworks</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Eco-Conscious Poly-Substrates</a></li>
+                        <li><a href="#services">Heavy Corrugated Configurations</a></li>
+                        <li><a href="#services">Rigid Presentation Cartons</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Corporate Assets</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">SST Sustainability Reports</a></li>
+                        <li><a href="#">Technical Blueprints</a></li>
+                        <li><a href="#">Global Supply Hubs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 the hollyPACK Manufacturing Corp. All rights reserved.</p>
+                <div style="display:flex; gap:16px;">
+                    <a href="#" style="color:#A0A0A0;"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" style="color:#A0A0A0;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Interactive Calculator Business Logic Javascript -->
+    <script>
+        function calculatePrice() {
+            // Read Inputs
+            const typeEl = document.querySelector('input[name="boxType"]:checked');
+            const boxType = typeEl ? typeEl.value : 'mailer';
+            const quantityInput = document.getElementById('quantity');
+            let quantity = parseInt(quantityInput.value) || 0;
+            
+            // Safety Enforcement for Minimun Volumes
+            if (quantity < 0) quantity = 0;
+            
+            const printing = document.getElementById('printing').value;
+
+            // Base Parameters Table Mapping
+            let basePrice = 0.45; // Default Mailer
+            if (boxType === 'corrugated') basePrice = 1.25;
+            if (boxType === 'rigid') basePrice = 4.50;
+
+            let printPremium = 0.00;
+            if (printing === 'monochrome') printPremium = 0.15;
+            if (printing === 'full') printPremium = 0.40;
+
+            // Volume Tier Bulk Matrix Processing
+            let discount = 0;
+            if (quantity >= 5000) {
+                discount = 0.20; // 20% price reduction
+            } else if (quantity >= 1000) {
+                discount = 0.10; // 10% price reduction
+            } else if (quantity >= 500) {
+                discount = 0.05; // 5% price reduction
+            }
+
+            // Calculations Equations
+            const perUnitCost = (basePrice + printPremium) * (1 - discount);
+            const totalOrderCost = perUnitCost * quantity;
+
+            // DOM UI Tree Updates
+            document.getElementById('label-base').innerText = `$${basePrice.toFixed(2)}`;
+            document.getElementById('label-print').innerText = `+$${printPremium.toFixed(2)}`;
+            document.getElementById('label-discount').innerText = `-${(discount * 100)}%`;
+            document.getElementById('total-price').innerText = totalOrderCost.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        // Initialize Calculation values on dynamic context launch loop
+        window.onload = calculatePrice;
+    </script>
 </body>
 </html>
